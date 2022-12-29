@@ -7,8 +7,12 @@ const TestMyTest = async () => {
     
   const myTestHome  = new MySecondTestHome('chrome'); 
   await myTestHome.GetBr('https://markformelle.by/'); 
-  await myTestHome.FindEl("/html/body/div[2]/div/div[3]/a"); 
-  await myTestHome.FindCountry("/html/body/div[2]/div/div[1]/div/div[2]/div/div[1]/span",'/html/body/div[2]/div/div[1]/div/div[2]/div/div[1]/div/a[3]'); 
+  await myTestHome.FindEl("//*[@class='header-location']"); 
+  await myTestHome.FindEl("/html/body/section/div/div[1]/ul/li[2]"); 
+
+  // await myTestHome.FindCountry("//*[@id='catalog-menu-list']/li[1]/a",'//*[@id="catalog-menu-list"]/li[1]/ul/li[1]/a'); 
+
+  // await myTestHome.FindCountry2("//*[@id='comp_112424704fc22d4a47377995a93a573a']/form/div/div[1]/ul/li[3]/div",'//*[@id="comp_112424704fc22d4a47377995a93a573a"]/form/div/div[1]/ul/li[3]/div/div[2]/ul/li[2]/div'); 
 
   await myTestHome.Finish();
 }  
