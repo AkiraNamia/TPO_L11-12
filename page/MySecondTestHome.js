@@ -12,6 +12,8 @@ class MySecondTestHome extends PageBase{
 
  }
  async FindEl(xp){
+  await this.driver.sleep(1000);
+
   await this.driver.findElement(By.xpath(xp)).click();
 }
 async FindCountry(xp1,xp2){
@@ -22,6 +24,11 @@ async FindCountry(xp1,xp2){
 
   }
 
+  async FindCountry2(xp1,xp2){
+    await this.driver.findElement(By.xpath(xp1)).click();
+    await this.driver.findElement(By.xpath(xp2)).click();
+
+  }
 async Finish()
 {
   await this.driver.sleep(5000);
